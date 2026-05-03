@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تحدي العواصم العربية للأذكياء</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Link to CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="min-h-screen flex items-center justify-center p-4">
+
+    <!-- Main Game Container -->
+    <div class="w-full max-w-md bg-white rounded-[2.5rem] shadow-2xl border-b-8 border-indigo-200 overflow-hidden game-card">
+        
+        <!-- Score and Progress Header -->
+        <div class="bg-indigo-600 p-5 text-white flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <span class="text-2xl">🏆</span>
+                <span id="score-display" class="text-xl font-bold">النقاط: 0</span>
+            </div>
+            <div id="progress-display" class="bg-indigo-500 px-3 py-1 rounded-full text-sm font-bold">
+                جاري التحميل...
+            </div>
+        </div>
+
+        <!-- Question Section (Flag and Country Name) -->
+        <div class="p-8 text-center" id="game-body">
+            <div class="relative inline-block mb-6">
+                <!-- Flag Container -->
+                <div class="w-48 h-32 bg-gray-100 rounded-2xl border-4 border-dashed border-indigo-100 flex items-center justify-center overflow-hidden shadow-inner">
+                    <img id="flag-image" src="" alt="علم الدولة" class="w-full h-full object-cover hidden">
+                    <div id="loader" class="animate-spin rounded-full h-10 w-10 border-b-2 border-indigo-600"></div>
+                </div>
+                <div class="absolute -bottom-3 -right-3 bg-yellow-400 w-12 h-12 rounded-full flex items-center justify-center text-2xl shadow-lg">
+                    🕌
+                </div>
+            </div>
+
+            <h2 class="text-gray-500 text-lg mb-1 text-center">ما هي عاصمة دولة</h2>
+            <h1 id="country-name" class="text-3xl font-black text-indigo-900 mb-8 text-center">...</h1>
+
+            <!-- Options Grid -->
+            <div id="options-grid" class="grid grid-cols-2 gap-4"></div>
+        </div>
+
+        <!-- Feedback Message Area -->
+        <div id="feedback-message" class="bg-gray-50 p-4 text-center min-h-[60px] flex items-center justify-center">
+            <p class="text-gray-400 font-medium text-center">استعد لبدء تحدي العواصم العربية! 🚀</p>
+        </div>
+    </div>
+
+    <!-- مكتبة التأثيرات البصرية -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <!-- Link to JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>

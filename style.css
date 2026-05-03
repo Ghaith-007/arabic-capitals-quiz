@@ -1,0 +1,38 @@
+/* Main font and background */
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: #f0f9ff;
+}
+
+/* Card hover effect */
+.game-card {
+    transition: all 0.3s ease;
+}
+
+/* Correct answer styling */
+.correct {
+    background-color: #10b981 !important;
+    color: white !important;
+    border-color: #059669 !important;
+    transform: scale(1.05);
+}
+
+/* Wrong answer styling */
+.wrong {
+    background-color: #ef4444 !important;
+    color: white !important;
+    border-color: #dc2626 !important;
+    animation: shake 0.4s;
+}
+
+/* Shake animation for wrong answer */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+/* Button default state */
+#options-grid button {
+    transition: all 0.2s ease;
+}
